@@ -55,6 +55,7 @@ export default function TableComponent(props){
             <th scope="col-3  ">Burnt</th>
             <th scope="col-3  ">Sales</th>
             <th scope="col-3  ">Owners</th>
+            <th scope="col-3  ">Last Sale</th>
           </tr>
         </thead>
         <tbody>
@@ -83,6 +84,14 @@ export default function TableComponent(props){
                 </td>
                 <td className="col-3 ">
                   <p className="w-100 p-2 ">{asset['owners']?.accounts.length}</p>
+                </td>
+                <td className="col-3 ">
+                  <p className="w-100 p-2 ">  
+                  {Number(asset?.last_sale?.total).toFixed(2) + ' '+ asset?.last_sale?.symbol}
+                    <p className="usd-price p-2">
+                      (${asset?.last_sale?.usd}) 
+                    </p>
+                  </p>
                 </td>
               </tr>)
           })}
