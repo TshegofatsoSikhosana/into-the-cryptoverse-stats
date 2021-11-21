@@ -53,7 +53,7 @@ export class Web3Client{
     const data  = await this.getOpenSeaCollection(contractAddress,collectionSlug);
     const assets = this.makeAssets(data);
     
-    console.log('Client data',data);
+    // console.log('Client data',data);
     return await this.getAssetOwners(contractAddress, assets);
   }
 

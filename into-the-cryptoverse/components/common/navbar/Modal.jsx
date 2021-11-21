@@ -11,7 +11,7 @@ function ModalComponent(props) {
     const {isBurnt} = props
 
     useEffect(()=>{
-        console.log('Show props',asset)
+        // console.log('Show props',asset)
         setShow(props.show)
     },[props.show])
 
