@@ -25,7 +25,6 @@ export default function TableComponent(props){
     }
 
     function handleRowClick(asset){
-      console.log('yep',asset);
       setModalData(asset);
       setTimeout(() => setShow(true),500);
     }
