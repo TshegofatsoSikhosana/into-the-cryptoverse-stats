@@ -9,6 +9,8 @@ export class Web3Client{
 
   }
 
+      // const data = await  getContractNFTs('0x9307edc4f23d87f9783a999f870b728ab9d34fe5',500);
+
   async getNFTOwnersByContractAdrressAndTokenID(contractAddress,tokenId,offset?) {
     const _offset = offset ? `offset=${offset}` :  ``;
     const url = `https://deep-index.moralis.io/api/v2/nft/${contractAddress}/${tokenId}/owners?${_offset}`
@@ -109,4 +111,21 @@ export class Web3Client{
   getDefaultHeaders(headers){
       return headers['x-api-key'] = "yWejnES29da4JA0vkFrM8z7hRtdPNUsT0YOpojKqskyO7APCokkXTYqK3kNYdCsN"
   }
+
+  getMetadata(item){
+    return JSON.parse(item.metadata)
+  }
+
+    // addTokenIds(data,name){
+  //   data.map((item) => {
+  //     const metadata = item.metadata;
+  //     if(metadata.name === name){
+  //       tokenIds.push(item.token_id);
+  //     }
+  //     items++;
+  //   })
+    
+  //   return tokenIds;
+  // }
+
 }
