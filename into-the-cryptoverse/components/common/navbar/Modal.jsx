@@ -39,10 +39,18 @@ function ModalComponent(props) {
               {asset.description}
           </p>
 
-          <p className="w-100 p-2 ">Total : {asset['owners']?.total}</p>
-          <p className="w-100 p-2 ">Number of Sales : {asset.num_sales}</p>
-          <p className="w-100 p-2 ">Burnt : {isBurnt(asset)}</p>
-          <p className="w-100 p-2 ">Owners : {asset['owners']?.accounts.length}</p>
+            <h2 className="eth-price p-2">
+            {'Last Sale:  '}
+            {Number(asset?.last_sale?.total).toFixed(2) + ' '+ asset?.last_sale?.symbol}
+            <p className="usd-price p-2">
+                (${asset?.last_sale?.usd}) 
+            </p>
+            </h2>
+
+          <p className="w-100 p-2 label-tag">Total : {asset['owners']?.total}</p>
+          <p className="w-100 p-2 label-tag">Number of Sales : {asset.num_sales}</p>
+          <p className="w-100 p-2 label-tag">Burnt : {isBurnt(asset)}</p>
+          <p className="w-100 p-2 label-tag">Owners : {asset['owners']?.accounts.length}</p>
             
           </Modal.Body>
           <Modal.Footer>

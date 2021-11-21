@@ -101,11 +101,21 @@ export class Web3Client{
         thumbnail: item.image_url,
         animation_url : item.animation_url,
         external_link : item.external_link,
-        opensea_link : item.permalink
+        opensea_link : item.permalink,
+        last_sale : this.getLastSale(item.last_sale),
       }
       _collection.push(asset);
     });
     return JSON.parse(JSON.stringify(_collection));
+  }
+
+  getLastSale(last_sale){
+    const {total_price,quantity,payment_token} = last_sale;
+    const {symbol,image_url,usd_price, eth_price, decimals} = payment_token;
+
+    const total = (total_price * Math.pow(10,(-1*decimals)) * eth_price) / quantity;
+    const usd = Number(total * usd_price).toFixed(2)
+    return { total, symbol,image_url,usd};
   }
 
   getDefaultHeaders(headers){

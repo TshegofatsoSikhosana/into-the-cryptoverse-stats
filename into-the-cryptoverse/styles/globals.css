@@ -13,8 +13,38 @@ tr .align-row-item-center {
   width: 100%;
 }
 
+.prices{
+  display: inline;
+  padding: 5%;
+}
 
+.eth-icon{
+  display: inline;
+}
 
+.eth-icon img{
+  width: 14px;
+  height: 20px; 
+}
+
+.eth-price{
+  display: inline-block;
+  height: 75px;
+  text-align: center;
+}
+
+.label-tag{
+  font-weight: 420;
+  font-size: large;
+}
+
+.usd-price{
+  display: inline-block;
+  height: 75px;
+  text-align: center;
+  font-weight: 300;
+  font-size: large;
+}
 a {
   color: inherit;
   text-decoration: none;
