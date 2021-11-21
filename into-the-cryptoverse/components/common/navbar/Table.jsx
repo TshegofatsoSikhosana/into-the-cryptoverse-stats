@@ -1,8 +1,10 @@
 
 
 import React,{useState, useEffect} from 'react'
+import { Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table'
 import ModalComponent from './Modal'
+import router from 'next/router';
 
 export default function TableComponent(props){
     const [tableState,setTableState] = useState(props.tableState);
@@ -32,8 +34,18 @@ export default function TableComponent(props){
       setShow(false);
     }
 
+    function handleViewSite(){
+      router.push('https://www.nft.intothecryptoverse.com/')
+    }
+
     return <>
-    <h1 className="w-100 p-4 text-center mb-2">WINNING Collection Stats</h1>
+    <h1 className="w-100 p-4 text-center mb-2">Into The Crytpoverse NFTs (Stats)</h1>
+    <div className="w-100 container text-center">
+      <Button onClick={handleViewSite} className="justify-self-center" >
+        Visit Website
+      </Button>
+    </div>
+    
     { tableState?.length != 0 &&
      <Table hover className="p-5 w-100" responsive  >
         <thead>
