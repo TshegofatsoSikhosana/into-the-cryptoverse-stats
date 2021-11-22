@@ -21,6 +21,18 @@ return (
     </Head>
     <NavBar/>
         <Component {...pageProps} />
+    <footer className="blockquote-footer p-5 bg-dark mt-5">
+            Made with ❤️
+        <h6>
+        <a href="https://twitter.com/cryptoverse13" className="p-2">
+            <img src="/twitter.png" alt="twitter icon" width="50" height="50"/>
+            @cryptoverse13
+        </a>
+        <a href="https://github.com/TshegofatsoSikhosana/into-the-cryptoverse-stats" className="p-2"> 
+        <img src="/unnamed.png" alt="github icon" width="40" height="40"/> Tshegofatso </a> 
+        </h6>
+       
+    </footer>
     </>)
 }
 

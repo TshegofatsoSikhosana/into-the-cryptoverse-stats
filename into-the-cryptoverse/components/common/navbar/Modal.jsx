@@ -27,7 +27,7 @@ function ModalComponent(props) {
           </Modal.Header>
           <Modal.Body>
           <div  className="w-100 p-2">
-            <img src={asset.thumbnail} className="w-100"/>
+            <img src={asset.thumbnail} className="w-100" alt="thumbnail"/>
           </div>
           { asset?.animation_url &&
             <Button variant="success" onClick={()=>{router.push(asset.animation_url)}} className="m-2">

@@ -65,7 +65,7 @@ export default function TableComponent(props){
               <tr key={asset.token_id} onClick={() => handleRowClick(asset)}>
                 <td className="col-4  w-25 ">
                   <div  className="w-100 p-2 ">
-                    <img src={asset.thumbnail} className="w-75"/>
+                    <img src={asset.thumbnail} className="w-75" alt="thumbnail"/>
                   </div>
                 </td>
                 <td className="col-3">
