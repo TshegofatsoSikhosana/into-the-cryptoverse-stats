@@ -29,7 +29,7 @@ return (
             @cryptoverse13
         </a>
         <a href="https://github.com/TshegofatsoSikhosana/into-the-cryptoverse-stats" className="p-2"> 
-        <img src="/unnamed.png" alt="github icon" width="30" height="30"/>Tshegofatso</a> 
+            <img src="/unnamed.png" alt="github icon" width="30" height="30"/>GitHub</a> 
         </h6>
        
     </footer>
